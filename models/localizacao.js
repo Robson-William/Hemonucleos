@@ -17,4 +17,4 @@ const Localizacao = database.define('ponto', {
 	}
 });
 
-module.exports = Localizacao;
+module.exports = localizacao;

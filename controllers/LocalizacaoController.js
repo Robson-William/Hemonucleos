@@ -1,0 +1,14 @@
+const Local = require('../models/localizacao');
+
+const addLocal = async (req, res) => {
+	const {nome, lat, lng} = req.body;
+
+	const geometria = {type: 'Point', coordinates:[lat, lng]}
+
+	const local = Local.build({nome, geometria});
+	local.save().then(() => {
+		res.status(200).send('Localização salva!');
+	}).catch(err => {
+		res.status(400).send('Falha ao salvar!');
+	})
+};
