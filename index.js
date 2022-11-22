@@ -1,21 +1,20 @@
 // Dependencias
 require('dotenv').config();
 const express = require('express');
+const {engine} = require('express-handlebars');
 const LocalizacaoController = require('./controllers/LocalizacaoController');
 
 const PORT = process.env.API_PORT
 const app = express();
-app.use(express.json());
-/*async function  testar() {try {
-  await sequelize.authenticate();
-  console.log('Connection has been established successfully.');
-} catch (error) {
-  console.error('Unable to connect to the database:', error);
-}
-}*/
-LocalizacaoController.sync();
+app.engine('handlebars', engine());
+app.set('view engine', 'handlebars');
+app.use(express.static('public'));
 
 // Rotas
+
+app.get('/', (req, res) => {
+	res.render('map');
+});
 app.post('/localizacao', LocalizacaoController.addLocal);
 
 // Porta
