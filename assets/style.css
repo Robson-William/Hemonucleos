@@ -1,0 +1,17 @@
+#map {
+    width: 50%;
+    height: 100%;
+    float:right;
+  }
+  
+  #form {    
+    width: 50%;
+    height: 100%;
+    justify-content: center;
+  }
+        
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
