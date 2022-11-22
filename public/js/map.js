@@ -48,5 +48,3 @@ function salvar(){
     .catch(error => alert('Falha ao salvar!'));    
 
 }
-
-window.initMap = initMap;
