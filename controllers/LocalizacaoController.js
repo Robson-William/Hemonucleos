@@ -3,7 +3,7 @@ const Local = require('../models/localizacao');
 const addLocal = async (req, res) => {
 	const {nome, lat, lng} = req.body;
 
-	const geometria = {type: 'Point', coordinates:[lat, lng]}
+	const geometria = {type: 'Point', coordinates:[lng, lat]}
 
 	const local = Local.build({nome, geometria});
 	local.save().then(() => {
