@@ -1,7 +1,7 @@
 const sequelize = require('sequelize');
 const database = require('../database/db');
 
-const Localizacao = database.define('ponto', {
+const Localizacao = database.define('hemonucleo', {
 	id:{
 		type: sequelize.UUID,
 		defaultValue: sequelize.UUIDV4,
