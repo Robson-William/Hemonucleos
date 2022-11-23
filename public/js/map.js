@@ -1,6 +1,5 @@
 let map;
 let marker;
-
 let center = {lat: -6.888463202449027, lng: -38.558930105104125};
 
 function initMap() {
@@ -49,9 +48,16 @@ function salvar(){
 
 }
 
+
+
 function listar(){
   fetch("http://localhost:3000/pontos",{
-    method: 'GET',
-  }).then(resposta.json)
-  return resposta.json
+      method: 'GET',
+  })
+  .then(resposta => resposta.json())
+  .then(data => console.log(data))
+  marker = new google.maps.Marker({
+    map: map,
+    draggable: true
+  });
 }
