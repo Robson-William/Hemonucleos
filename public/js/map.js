@@ -48,3 +48,10 @@ function salvar(){
     .catch(error => alert('Falha ao salvar!'));    
 
 }
+
+function listar(){
+  fetch("http://localhost:3000/pontos",{
+    method: 'GET',
+  }).then(resposta.json)
+  return resposta.json
+}
