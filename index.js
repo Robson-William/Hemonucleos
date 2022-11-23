@@ -15,3 +15,6 @@ app.post('/localizacao', LocalizacaoController.addLocal);
 // Porta
 app.listen(PORT, console.log(`A aplicação está rodando na porta ${PORT}`));
 
+app.get('/pontos', pontoController.getPontos);
+
+LocalizacaoController.sync();

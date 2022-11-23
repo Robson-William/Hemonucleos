@@ -13,9 +13,14 @@ const addLocal = async (req, res) => {
 	})
 };
 
+const getPontos = async (request, response) =>{
+    const pessoas = await Ponto.findAll();
+    response.status(200).send(pessoas);
+}
+
 const sync = async () =>{
 	await Local.sync();
 	console.log('Banco de dados sincronizado!');
 }
 
-module.exports = {addLocal, sync};
+module.exports = {addLocal, getPontos, sync};
