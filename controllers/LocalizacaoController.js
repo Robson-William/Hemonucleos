@@ -1,3 +1,4 @@
+const Localizacao = require('../models/localizacao');
 const Local = require('../models/localizacao');
 
 const addLocal = async (req, res) => {
@@ -14,7 +15,7 @@ const addLocal = async (req, res) => {
 };
 
 const getPontos = async (request, response) =>{
-    const pessoas = await Ponto.findAll();
+    const pessoas = await Localizacao.findAll();
     response.status(200).send(pessoas);
 }
 
