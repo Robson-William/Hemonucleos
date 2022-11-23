@@ -3,13 +3,6 @@
     "development"
   ],
   "hints": {
-    "meta-viewport": "off",
-    "axe/language": "off",
-    "axe/forms": [
-      "default",
-      {
-        "label": "off"
-      }
-    ]
+    "meta-viewport": "off"
   }
 }
