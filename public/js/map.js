@@ -55,9 +55,19 @@ function listar(){
       method: 'GET',
   })
   .then(resposta => resposta.json())
-  .then(data => console.log(data))
-  marker = new google.maps.Marker({
-    map: map,
-    draggable: true
-  });
+  .then(resposta2 => {
+    for(let hemonucleo of resposta2){
+      console.log(hemonucleo)
+      const latitude = parseFloat(hemonucleo.geometria.coordinates[1])
+      const longitude = parseFloat(hemonucleo.geometria.coordinates[0])
+      marker = new google.maps.Marker({
+        map: map,
+        position: {
+          lat: latitude,
+          lng: longitude
+        },
+        draggable: true
+      })
+    }
+  })
 }
