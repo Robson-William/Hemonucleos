@@ -1,6 +1,20 @@
 #map {
   height: 50%;
-  width: 50%;
+  width: 60%;
+  margin-left: 380px;
+  margin-top: 10px;
+  border: 0.5px solid black;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 0px;
+}
+
+#map:hover{
+  border: 1px solid black;
+  transition: .1s;
+  transform: rotateY(360deg);
+  box-shadow: 0px 5px 35px 0px;
+  background: #FDA8CF;
 }
 
 html,
@@ -8,8 +22,35 @@ body {
   height: 100%;
   margin: 0;
   padding: 0;
+  background-color: rgb(232, 224, 240);
 }
 
 h1 {
 	color: blue;
+}
+
+#head{
+  background-color: rgb(38, 0, 255);
+  padding: 30px;
+}
+
+#container{
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+
+#form{
+  border: 1px solid black;
+  margin-left: 800px;
+  width: 400px;
+  font-size: 20px;
+  padding: 10px;
+  margin-top: 10px;
+}
+
+button{
+  width: 200px;
+  height: 30px;
+  margin-top: 20px;
 }
